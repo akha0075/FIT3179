@@ -1,0 +1,41 @@
+h1 {
+	text-align: left;
+	padding-left: 1%;
+}
+
+
+#solar_states_map {
+	width: 50%;
+  	margin: 0 auto;
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px; */
+	/* height: 100px;
+	width: 800px; */
+}
+
+
+#coal_states_map {
+	width: 50%;
+  	margin: 0 auto;
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px; */
+	/* height: 100px;
+	width: 800px; */
+}
+
+
+#stack_chart_energy {
+	margin: auto;
+	height: 50%;
+	width: 50%;
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px; */
+	/* height: 100px;
+	width: 800px; */
+}
