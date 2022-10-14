@@ -1,0 +1,361 @@
+year,Sector,Generated (billion kWh)
+1950,coal,155
+1951,coal,185
+1952,coal,195
+1953,coal,219
+1954,coal,239
+1955,coal,301
+1956,coal,339
+1957,coal,346
+1958,coal,344
+1959,coal,378
+1960,coal,403
+1961,coal,422
+1962,coal,450
+1963,coal,494
+1964,coal,526
+1965,coal,571
+1966,coal,613
+1967,coal,630
+1968,coal,685
+1969,coal,706
+1970,coal,704
+1971,coal,713
+1972,coal,771
+1973,coal,848
+1974,coal,828
+1975,coal,853
+1976,coal,944
+1977,coal,985
+1978,coal,976
+1979,coal,1075
+1980,coal,1162
+1981,coal,1203
+1982,coal,1192
+1983,coal,1259
+1984,coal,1342
+1985,coal,1402
+1986,coal,1386
+1987,coal,1464
+1988,coal,1541
+1989,coal,1584
+1990,coal,1594
+1991,coal,1591
+1992,coal,1621
+1993,coal,1690
+1994,coal,1691
+1995,coal,1709
+1996,coal,1795
+1997,coal,1845
+1998,coal,1874
+1999,coal,1881
+2000,coal,1966
+2001,coal,1904
+2002,coal,1933
+2003,coal,1974
+2004,coal,1978
+2005,coal,2013
+2006,coal,1991
+2007,coal,2016
+2008,coal,1986
+2009,coal,1756
+2010,coal,1847
+2011,coal,1733
+2012,coal,1514
+2013,coal,1581
+2014,coal,1582
+2015,coal,1352
+2016,coal,1239
+2017,coal,1206
+2018,coal,1149
+2019,coal,965
+2020,coal,773
+2021,coal,899
+1950,natural gas,45
+1951,natural gas,57
+1952,natural gas,68
+1953,natural gas,80
+1954,natural gas,94
+1955,natural gas,95
+1956,natural gas,104
+1957,natural gas,114
+1958,natural gas,120
+1959,natural gas,147
+1960,natural gas,158
+1961,natural gas,169
+1962,natural gas,184
+1963,natural gas,202
+1964,natural gas,220
+1965,natural gas,222
+1966,natural gas,251
+1967,natural gas,265
+1968,natural gas,304
+1969,natural gas,333
+1970,natural gas,373
+1971,natural gas,374
+1972,natural gas,376
+1973,natural gas,341
+1974,natural gas,320
+1975,natural gas,300
+1976,natural gas,295
+1977,natural gas,306
+1978,natural gas,305
+1979,natural gas,329
+1980,natural gas,346
+1981,natural gas,346
+1982,natural gas,305
+1983,natural gas,274
+1984,natural gas,297
+1985,natural gas,292
+1986,natural gas,249
+1987,natural gas,273
+1988,natural gas,253
+1989,natural gas,353
+1990,natural gas,373
+1991,natural gas,382
+1992,natural gas,404
+1993,natural gas,415
+1994,natural gas,460
+1995,natural gas,496
+1996,natural gas,455
+1997,natural gas,479
+1998,natural gas,531
+1999,natural gas,556
+2000,natural gas,601
+2001,natural gas,639
+2002,natural gas,691
+2003,natural gas,650
+2004,natural gas,710
+2005,natural gas,761
+2006,natural gas,816
+2007,natural gas,897
+2008,natural gas,883
+2009,natural gas,921
+2010,natural gas,988
+2011,natural gas,1014
+2012,natural gas,1226
+2013,natural gas,1125
+2014,natural gas,1127
+2015,natural gas,1333
+2016,natural gas,1378
+2017,natural gas,1296
+2018,natural gas,1469
+2019,natural gas,1586
+2020,natural gas,1624
+2021,natural gas,1575
+1950,nuclear,0
+1951,nuclear,0
+1952,nuclear,0
+1953,nuclear,0
+1954,nuclear,0
+1955,nuclear,0
+1956,nuclear,0
+1957,nuclear,0
+1958,nuclear,0
+1959,nuclear,0
+1960,nuclear,1
+1961,nuclear,2
+1962,nuclear,2
+1963,nuclear,3
+1964,nuclear,3
+1965,nuclear,4
+1966,nuclear,6
+1967,nuclear,8
+1968,nuclear,13
+1969,nuclear,14
+1970,nuclear,22
+1971,nuclear,38
+1972,nuclear,54
+1973,nuclear,83
+1974,nuclear,114
+1975,nuclear,173
+1976,nuclear,191
+1977,nuclear,251
+1978,nuclear,276
+1979,nuclear,255
+1980,nuclear,251
+1981,nuclear,273
+1982,nuclear,283
+1983,nuclear,294
+1984,nuclear,328
+1985,nuclear,384
+1986,nuclear,414
+1987,nuclear,455
+1988,nuclear,527
+1989,nuclear,529
+1990,nuclear,577
+1991,nuclear,613
+1992,nuclear,619
+1993,nuclear,610
+1994,nuclear,640
+1995,nuclear,673
+1996,nuclear,675
+1997,nuclear,629
+1998,nuclear,674
+1999,nuclear,728
+2000,nuclear,754
+2001,nuclear,769
+2002,nuclear,780
+2003,nuclear,764
+2004,nuclear,789
+2005,nuclear,782
+2006,nuclear,787
+2007,nuclear,806
+2008,nuclear,806
+2009,nuclear,799
+2010,nuclear,807
+2011,nuclear,790
+2012,nuclear,769
+2013,nuclear,789
+2014,nuclear,797
+2015,nuclear,797
+2016,nuclear,806
+2017,nuclear,805
+2018,nuclear,807
+2019,nuclear,809
+2020,nuclear,790
+2021,nuclear,778
+1950,renewables,101
+1951,renewables,105
+1952,renewables,110
+1953,renewables,110
+1954,renewables,112
+1955,renewables,117
+1956,renewables,125
+1957,renewables,134
+1958,renewables,144
+1959,renewables,141
+1960,renewables,150
+1961,renewables,156
+1962,renewables,172
+1963,renewables,169
+1964,renewables,181
+1965,renewables,197
+1966,renewables,198
+1967,renewables,226
+1968,renewables,227
+1969,renewables,254
+1970,renewables,252
+1971,renewables,270
+1972,renewables,278
+1973,renewables,278
+1974,renewables,307
+1975,renewables,307
+1976,renewables,291
+1977,renewables,228
+1978,renewables,287
+1979,renewables,287
+1980,renewables,285
+1981,renewables,270
+1982,renewables,318
+1983,renewables,342
+1984,renewables,333
+1985,renewables,295
+1986,renewables,306
+1987,renewables,265
+1988,renewables,238
+1989,renewables,325
+1990,renewables,357
+1991,renewables,358
+1992,renewables,327
+1993,renewables,357
+1994,renewables,337
+1995,renewables,385
+1996,renewables,423
+1997,renewables,434
+1998,renewables,400
+1999,renewables,399
+2000,renewables,356
+2001,renewables,288
+2002,renewables,343
+2003,renewables,355
+2004,renewables,351
+2005,renewables,358
+2006,renewables,386
+2007,renewables,353
+2008,renewables,381
+2009,renewables,418
+2010,renewables,427
+2011,renewables,513
+2012,renewables,495
+2013,renewables,522
+2014,renewables,539
+2015,renewables,544
+2016,renewables,609
+2017,renewables,687
+2018,renewables,707
+2019,renewables,729
+2020,renewables,783
+2021,renewables,826
+1950,petroleum and other,34
+1951,petroleum and other,29
+1952,petroleum and other,30
+1953,petroleum and other,38
+1954,petroleum and other,32
+1955,petroleum and other,37
+1956,petroleum and other,36
+1957,petroleum and other,40
+1958,petroleum and other,40
+1959,petroleum and other,47
+1960,petroleum and other,48
+1961,petroleum and other,49
+1962,petroleum and other,49
+1963,petroleum and other,52
+1964,petroleum and other,57
+1965,petroleum and other,65
+1966,petroleum and other,79
+1967,petroleum and other,89
+1968,petroleum and other,104
+1969,petroleum and other,138
+1970,petroleum and other,184
+1971,petroleum and other,220
+1972,petroleum and other,274
+1973,petroleum and other,314
+1974,petroleum and other,301
+1975,petroleum and other,289
+1976,petroleum and other,320
+1977,petroleum and other,358
+1978,petroleum and other,365
+1979,petroleum and other,304
+1980,petroleum and other,246
+1981,petroleum and other,206
+1982,petroleum and other,147
+1983,petroleum and other,144
+1984,petroleum and other,120
+1985,petroleum and other,100
+1986,petroleum and other,137
+1987,petroleum and other,118
+1988,petroleum and other,149
+1989,petroleum and other,176
+1990,petroleum and other,137
+1991,petroleum and other,131
+1992,petroleum and other,113
+1993,petroleum and other,125
+1994,petroleum and other,120
+1995,petroleum and other,90
+1996,petroleum and other,96
+1997,petroleum and other,105
+1998,petroleum and other,141
+1999,petroleum and other,130
+2000,petroleum and other,124
+2001,petroleum and other,137
+2002,petroleum and other,111
+2003,petroleum and other,141
+2004,petroleum and other,142
+2005,petroleum and other,142
+2006,petroleum and other,85
+2007,petroleum and other,85
+2008,petroleum and other,63
+2009,petroleum and other,57
+2010,petroleum and other,56
+2011,petroleum and other,49
+2012,petroleum and other,44
+2013,petroleum and other,49
+2014,petroleum and other,50
+2015,petroleum and other,50
+2016,petroleum and other,44
+2017,petroleum and other,40
+2018,petroleum and other,46
+2019,petroleum and other,39
+2020,petroleum and other,37
+2021,petroleum and other,37
