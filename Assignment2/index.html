@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>Energy Generation In The United States</h1>
+        <p>by Aayan Khan</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+
+
+
+    <div class="description">
+      <h2>Energy Generation By State</h2>
+      <p>
+        
+        The US is home to 50 states, each of which have their own governing bodies and resources.
+        Thus, it is no surprise that these states have vastly different energy generation methods. Some 
+        states like Tennesee generate over 43 percent of their energy from nuclear whereas other states like
+        Indiana generate none of their energy from nuclear.
+
+        <br>
+      </p>
+    </div>
+
+
+    <!-- line graph -->
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="state_energy_map" class="vis-container" style="text-align:center;"></div>
+        <br>
+        <br>
+        
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+
+
+
+
+
+    
+    <div class="description">
+      <h2>Total Energy Consumption and Per Capita Energy Consumption</h2>
+      <p>
+        
+        Total U.S energy consumption has gradually increased over time along with the population, 
+        however, the energy consumed per person has remained flat over the past 40 years. This is
+        likely due to the increases in efficiency of appliances as well as transport.
+
+        <br>
+        <br>
+        We can clearly see a sudden decline in the total energy consumption as well as the per capita consumption
+        in 2020 due to COVID-19.
+
+
+      </p>
+    </div>
+
+
+    <!-- line graph -->
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="line_graph" class="vis-container" style="text-align:center;"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Change Over Time (All)</h2>
+          <p>
+            While the total energy generation has been growing as a whole, we can clearly see that some industries
+            have outpaced others over the past years. 
+            
+            <br><br>
+            
+            Coal was dominant twenty years ago but has since lost the
+            crown to natural gas which is now the most common type of energy generation method used in the US today.
+            
+            <br><br>
+            
+            Other industries like nuclear and renewables have also gained significant traction over the past fourty 
+            years while petroleum has slowly been phased out. 
+            <br><br>
+          </p>
+        </div>
+      </div>
+
+      <div class="pure-u-2-3" style="width: 63%;">
+        <div id="area_chart_all" class="vis-container" style="margin-left: 15px;"></div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <br>
+      <br>
+
+        <div class="pure-u-2-3" style="width: 63%;">
+          <div id="area_chart_renewables" class="vis-container"></div>
+        </div>
+
+        <div class="pure-u-1-3">
+          <div class="description description-right" style="margin-left: 40px;">
+            <h2>Change Over Time (Renewables)</h2>
+            <p>
+              Renewables have been steadily increasing production these past few years. Wind has especially increased
+              energy generation since 2010 while hydroelectric has maintained its output at a steady pace. 
+              
+              <br><br>
+              
+              We can also see that solar is slowly being adopted more and more while industries like geothermal and
+              biomass have slightly shrunk.
+              
+              <br><br>
+              
+              We will likely see continued adoption of renewables as climate change becomes an increasingly important issue. 
+              <br><br>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    <!-- end pure grid group -->
+
+
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+
+          <div class="pure-u-1-2">
+            <div class="description description-left">
+              <h2>Consumers Of Energy</h2>
+              <p>
+                Transportation and Industrial sectors account for the majority of energy consumption in the US as they 
+                consume thirty-seven percent and thiry-five percent of the generated energy resepectively. Similarly,
+                Residential consumers utilize about 16 percent of the generated energy while Commercial consumers
+                use up the remaining twelve percent. 
+              </p>
+            </div>
+          </div>
+    
+          <div class="pure-u-1-2">
+            <div class="description description-right">
+              <h2>Overall Energy Production</h2>
+              <p>
+                While states may differ vastly from each other, the overall composition of energy generation in the US
+                often tells the same story. The majority of energy in the United States is generated using Coal and 
+                Natural Gas while Nuclear produces about twenty percent. Finally, about fifteen percent is generated through
+                renewable means. 
+
+              </p>
+            </div>
+          </div>
+    
+        </div>
+        <!-- end pure grid group -->
+
+
+
+
+    
+        <!-- pure grid group -->
+        <div class="pure-g">
+          
+          <div class="pure-u-1-2">
+            <div id="donut_chart_consumers" class="vis-container" style="text-align:center;"></div>
+          </div>
+    
+          <div class="pure-u-1-2">
+            <div id="donut_chart_overall_energy" class="vis-container" style="text-align:center;"></div>
+          </div>
+    
+        </div>
+        <!-- end pure grid group -->
+    
+
+        
+
+        <div class="description">
+          <h2>Energy Prices By State and Dominant Sector</h2>
+          <p>
+            
+            The price of energy can vary severely from state to state and is impacted by a multitude of factors. These
+            can include things such as the median income in the state or the cost of living. Furthermore, the
+            population may impact the demand for energy in the state. Ultimately, the source of energy also plays a 
+            vital role in the pricing of energy as some industries are cheaper to operate than others. 
+    
+            <br>
+          </p>
+        </div>
+    
+    
+        <!-- line graph -->
+        <!-- pure grid group -->
+        <div class="pure-g">
+          <div class="pure-u-1-1">
+            <div id="price_bubble_chart" class="vis-container" style="text-align:center;"></div>            
+          </div>
+        </div>
+        <!-- end pure grid group -->
+
+
+        <div class="pure-g">
+          <div class="pure-u-1-1 small-font">
+            <p>
+              
+              Under the license of Creative Commons Attribution <br><br>
+              Datasets:<br>
+              https://www.eia.gov/energyexplained/electricity/electricity-in-the-us.php<br>
+              https://www.eia.gov/tools/faqs/faq.php?id=427&t=3<br>
+              https://www.eia.gov/electricity/state/<br>
+              https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_income<br>
+              https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population<br>
+              https://ourworldindata.org/energy/country/united-states
+            
+            </p>
+          </div>
+        </div>
+
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var specVis1 = "./normalised-stacked-bars-responsive.json";
+    var specVis2 = "./line-chart-responsive.json";
+
+    var specVisLine = "js/line_graph_usa_consumption.vg.json";
+    var specVisAreaChartAll = "js/area_chart_all_sectors.vg.json";
+    var specVisAreaChartRenewables = "js/area_chart_renewables.vg.json";
+    var specStatesEnergyMap = "js/usa_energy_states_map.vg.json";
+    var specDonutConsumers = "js/donut_chart_consumers.vg.json";
+    var specDonutGeneration = "js/donut_chart_net_energy_by_sector.vg.json";
+    var specBubbleChartPrice = "js/bubble_plot_interactive.vg.json";
+
+
+    vegaEmbed('#line_graph', specVisLine, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#area_chart_all', specVisAreaChartAll, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#area_chart_renewables', specVisAreaChartRenewables, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#state_energy_map', specStatesEnergyMap , { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#donut_chart_consumers', specDonutConsumers , { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#donut_chart_overall_energy', specDonutGeneration, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#price_bubble_chart', specBubbleChartPrice, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+
+
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+</body>
+
+</html>
