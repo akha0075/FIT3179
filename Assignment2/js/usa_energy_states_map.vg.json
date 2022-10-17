@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,  "height": 600,
+  "projection": {"type": "albersUsa"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/akha0075/FIT3179/main/Assignment2/data/ne_110m_admin_1_states_provinces.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_1_states_provinces"}
+  },
+  "background":"transparent",
+
+  "params": [
+    {
+      "name": "Sector_Selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          "NUCLEAR",
+          "COAL",
+          "NATURAL GAS",
+          "PETROLEUM",
+          "HYDRO",
+          "GEOTHERMAL",
+          "SOLAR",
+          "WIND",
+          "BIOMASS AND OTHER"
+        ],
+
+        "labels": [
+          "NUCLEAR",
+          "COAL",
+          "NATURAL GAS",
+          "PETROLEUM",
+          "HYDRO",
+          "GEOTHERMAL",
+          "SOLAR",
+          "WIND",
+          "BIOMASS AND OTHER"
+        ],
+        "name": "Sector Selection: "
+
+
+      },
+      "value": "NUCLEAR"
+      
+    }
+  ],
+
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/akha0075/FIT3179/main/Assignment2/data/electricity_generation_by_state_by_industry.csv"
+        },
+        "key": "STATE",
+        "fields": ["STATE", "NATURAL GAS", "COAL", "GEOTHERMAL", "SOLAR", "BIOMASS AND OTHER", "WIND", "HYDRO", "NUCLEAR", "PETROLEUM"]
+      }
+    },
+    
+    {
+      "calculate": "datum[Sector_Selection]",
+      "as": "y"
+    }
+
+  ],
+
+  "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.2},
+
+  "encoding": {
+    "color": {
+      "field": "y",
+      "type": "quantitative",
+      "title": "% of Total Energy",
+      "scale": {"scheme": "lightgreyteal", "domain": [1, 10, 20, 50, 100], "range": ["#d7ddde", "#85b2be", "#4aacc1", "#22a1c2", "#2192c0", "#1e84be"]}
+    },
+
+    "tooltip": [
+      {"field": "STATE", "type": "nominal", "title": "State"},
+      {"field": "y", "type": "quantitative", "title": "Percentage"}
+
+    ]
+  },
+  "config": {
+    "legend": {"orient": "top"}
+  }
+}

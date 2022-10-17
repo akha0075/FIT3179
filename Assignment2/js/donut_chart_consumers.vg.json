@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300, "height": 280,
+  "data": {"url": "https://raw.githubusercontent.com/akha0075/FIT3179/main/Assignment2/data/percentage_consumption_by_consumer.csv"},
+  "background":"transparent",
+  "encoding": {
+    "theta": {"field": "Consumption", "type": "quantitative", "stack": true},
+    "color": {"field": "Sector", "type": "nominal", "legend": null}
+  },
+  "layer": [{
+    "mark": {"type": "arc", "outerRadius": 200, "innerRadius": 150, "tooltip": true}
+        
+  }, 
+  
+  {
+    "mark": {"type": "text", "radius": 200, "radiusOffset": 40, "tooltip": true},
+    "encoding": {
+      "text": {"field": "Sector", "type": "nominal"},
+      "color": {"field": "Sector", "type": "nominal", "legend":null, "scale": {"scheme": "set2"}}   
+
+    }
+  }]
+}

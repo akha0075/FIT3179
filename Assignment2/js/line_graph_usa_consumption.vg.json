@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1100, "height": 600,
+  "background":"transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/akha0075/FIT3179/main/Assignment2/data/usa_total_and_per_capita_energy_consumption_years.csv"
+  },
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "Year",
+      "axis": {"domain": false, "format": "%Y", "tickSize": 0, "gridOpacity":0},
+      "title": "Year"
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "color": "#6b6ecf", "tooltip": true},
+      "encoding": {
+        "y": {
+          "aggregate": "average",
+          "field": "Primary energy consumption (TWh)",
+          "title": "Total Energy Consumption (TWh)",
+          "axis": {"titleColor": "#6b6ecf", "labelColor": "#6b6ecf", "labelFontWeight":"bold"},
+          "scale": {"type": "linear", "domain": [10000, 30000]}
+        }
+      }
+    },
+    {
+      "mark": {"stroke": "#e97100", "type": "line", "tooltip": true},
+      "encoding": {
+        "y": {
+          "aggregate": "average",
+          "field": "Primary energy consumption per capita (kWh/person)",
+          "title": "Consumption Per Person (kWh)",
+          "axis": {"titleColor": "#e97100", "labelColor": "#e97100", "labelFontWeight":"bold"},
+          "scale": {"type": "linear", "domain": [60000, 100000]}
+          
+          
+        }
+      }
+    },
+    {
+      
+        "mark": {"type": "rule", "strokeDash": [4, 1], "size": 1},
+        "encoding": {"x": {"datum": {"year": 2020}}}
+      
+    },
+    {
+      
+      "mark": {"type": "text"},
+      "encoding": {
+        "x": {"datum": {"year": 2018}}, 
+        "y": {"datum": {"year": 1}},
+        "text": {"value": "COVID-19"}
+      }
+    
+  }
+    
+  ],
+  "resolve": {"scale": {"y": "independent"}}
+}

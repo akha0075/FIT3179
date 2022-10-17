@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300, "height": 280,
+  "data": {"url": "https://raw.githubusercontent.com/akha0075/FIT3179/main/Assignment2/data/percentage_generation_by_source.csv"},
+  "background":"transparent",
+  "encoding": {
+    "theta": {"field": "Generation", "type": "quantitative", "stack": true},
+    "color": {"field": "Sector", "type": "nominal", "legend": null}
+  },
+  "layer": [{
+    "mark": {"type": "arc", "outerRadius": 200, "innerRadius": 150, "tooltip": true}
+        
+  }, 
+  
+  {
+    "mark": {"type": "text", "radius": 200, "radiusOffset": 40, "tooltip": true},
+    "encoding": {
+      "text": {"field": "Sector", "type": "nominal"},
+      "color": {"field": "Sector", "type": "nominal", "legend":null, "scale": {"domain": ["Natural Gas", "Coal", "Geothermal", "Solar", "Biomass", "Wind", "Hydroelectric", "Nuclear", "Oil (petroleum and other sources)"], "range": ["#f58518", "#4c78a8", "#c0e6ba", "#94d391", "#60ba6c", "#329a51", "#0e7735", "#e45756", "#72b7b2"]}}
+    }
+  }]
+}

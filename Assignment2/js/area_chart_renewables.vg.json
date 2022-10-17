@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 750, "height": 450,
+  "data": {"url": "https://raw.githubusercontent.com/akha0075/FIT3179/main/Assignment2/data/renewable_generation_by_sector_year_long.csv"},
+  "background":"transparent",
+  "mark": "area",
+  "params": [{
+    "name": "Sector",
+    "select": {"type": "point", "fields": ["Sector"]},
+    "bind": "legend"
+  }],
+  "encoding": {
+    "x": {
+      "timeUnit": "year", "field": "year",
+      "axis": {"domain": false, "format": "%Y", "tickSize": 0},
+      "title": "Year"
+    },
+    "y": {
+      "aggregate": "sum", "field": "Generated (billion kWh)",
+      "title": "Energy Generated (billion kWh)"
+    },
+    "color": {
+      "field": "Sector",
+      "scale": {"domain": ["geothermal", "solar", "biomass", "wind", "hydroelectric"], "range": ["#c0e6ba", "#94d391", "#60ba6c", "#329a51", "#0e7735"]}
+    },
+    "opacity": {
+      "condition": {"param": "Sector", "value": 1},
+      "value": 0.2
+    },
+
+    "tooltip": [
+      {"field": "Generated (billion kWh)", "type": "quantitative", "title": "Generated (billion kWh)"},
+      {"field": "Sector", "type": "nominal", "title": "Sector"},
+      {"field": "year", "type": "temporal", "title": "Year", "format": "%Y"}
+    ]
+  },
+  "config": {
+    "legend": {"orient": "top"}
+  }
+}

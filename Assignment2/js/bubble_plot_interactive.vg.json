@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 700,
+  "data": {
+    "url": "https://raw.githubusercontent.com/akha0075/FIT3179/main/Assignment2/data/bubble_chart_data.csv"
+  },
+  "background":"transparent",
+  "params": [
+    {
+      "name": "Dominant_Selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "NUCLEAR",
+          "COAL",
+          "NATURAL GAS",
+          "PETROLEUM",
+          "HYDRO",
+          "GEOTHERMAL",
+          "SOLAR",
+          "WIND",
+          "BIOMASS AND OTHER"
+        ],
+
+        "labels": [
+          "Show All",
+          "NUCLEAR",
+          "COAL",
+          "NATURAL GAS",
+          "PETROLEUM",
+          "HYDRO",
+          "GEOTHERMAL",
+          "SOLAR",
+          "WIND",
+          "BIOMASS AND OTHER"
+        ],
+        "name": "Dominant Industry Selection: "
+      }
+    }
+  ],
+  "transform": [
+
+    {
+      "filter": "Dominant_Selection == null || datum.Dominant_Industry == Dominant_Selection"
+    }
+
+  ],
+
+  "encoding": {
+
+    "x": {
+      "field": "Median Income (2019)",
+      "type": "quantitative",
+      "title": "Median Income",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "linear", "domain": [40000, 90000]}
+    },
+
+    "y": {
+      "field": "Average retail price (cents/kWh)",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "linear", "domain": [0, 30]}
+    }
+
+  },
+
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Population (2021)",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 5000000, 10000000, 20000000, 30000000],
+            "range": [50, 100, 500, 1000, 2000, 3000]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "Dominant_Industry",
+          "type": "nominal",
+          "scale": {"domain": ["NATURAL GAS", "COAL", "GEOTHERMAL", "SOLAR", "BIOMASS AND OTHER", "WIND", "HYDRO", "NUCLEAR", "PETROLEUM"], "range": ["#f58518", "#4c78a8", "#c0e6ba", "#94d391", "#60ba6c", "#329a51", "#0e7735", "#e45756", "#72b7b2"]}
+        },
+        "opacity": {"value": 0.7},
+        "tooltip": [
+          {"field": "State", "type": "nominal"},
+          {"field": "Median Income (2019)", "type": "quantitative", "format": "$,", "title": "Median Income"},
+          {"field": "Average retail price (cents/kWh)", "type": "quantitative", "format": "$,", "title": "Price Per Unit"},
+          {"field": "Population (2021)", "type": "quantitative", "format": ","},
+          {"field": "Dominant_Industry", "type": "nominal", "title": "Dominant Industry"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "State", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['State'] == ' California' || datum['State'] == ' Texas' || datum['State'] == ' Florida' || datum['State'] == ' New York' || datum['State'] == ' Tennessee'|| datum['State'] == ' Hawaii'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal"},
+          {"field": "Median Income (2019)", "type": "quantitative", "format": "$,", "title": "Median Income"},
+          {"field": "Average retail price (cents/kWh)", "type": "quantitative", "format": "$,", "title": "Price Per Unit"},
+          {"field": "Population (2021)", "type": "quantitative", "format": ","},
+          {"field": "Dominant_Industry", "type": "nominal", "title": "Dominant Industry"}
+        ]
+      }
+    }
+  ]
+}
